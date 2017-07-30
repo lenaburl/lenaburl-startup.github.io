@@ -3,15 +3,15 @@ function initButton () {
   $(".button-works").click(function (){
     var blockattr = $(this).data("whatdoineed");
     if (blockattr == "all") {
-      $(".work-item").fadeIn("slow");
+      $(".work-item").show(1000);
     }
     else {
-      $(".work-item:not(." + blockattr + ")").fadeOut("slow");
-      $("." + blockattr).fadeIn("slow");
+      $(".work-item:not(." + blockattr + ")").hide(1000);
+      $("." + blockattr).show(1000);
     }
   });
 }
 
 $(document).ready(function() {
-  initButton();
+  setTimeout(initButton(), 1500);
 });
