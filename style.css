@@ -360,6 +360,11 @@ body {
 
 .works-section {
   margin-bottom: 70px;
+  min-height: 585px;
+}
+.works-nav {
+  margin: 0 auto;
+  max-width: 420px;
 }
 
 .works-nav ul {
@@ -367,13 +372,16 @@ body {
   padding: 0;
   list-style: none;
   text-align: center;
-  margin-left: 365px;
 }
 
 .works-nav li {
   float: left;
   margin-right: 26px;
   font-size: 16px;
+}
+
+.works-nav li:last-child {
+  margin-right: 0;
 }
 
 .works-nav input {
@@ -398,14 +406,15 @@ body {
 
 .works-items {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 115px;
+  margin-left: -30px;
 }
 
 .work-item {
   position: relative;
   margin-bottom: 23px;
+  margin-left: 30px;
 }
 
 .work-item::after {
