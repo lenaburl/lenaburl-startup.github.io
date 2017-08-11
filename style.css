@@ -16,6 +16,7 @@ body {
 
 .container {
   max-width: 1140px;
+  min-width: 1140px;
   margin: 0 auto;
 }
 
@@ -29,6 +30,7 @@ body {
   height: 100vh;
   padding-top: 20px;
   margin-bottom: 97px;
+  min-width: 1140px;
   color: #ffffff;
   background-color: #000000;
   background-image: url("img/header_bg.png");
@@ -41,7 +43,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 261px;
+  margin-bottom: 250px;
 }
 
 .header-logo {
@@ -88,7 +90,8 @@ body {
   font-size: 48px;
   text-transform: uppercase;
   font-weight: normal;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+  line-height: 48px;
 }
 
 .page-header-middle p {
@@ -152,12 +155,13 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   font-size: 14px;
+  margin-left: -30px;
 }
 
 .services-item {
   position: relative;
-  width: 350px;
-  margin-right: 30px;
+  max-width: 350px;
+  margin-left: 30px;
   margin-bottom: 80px;
 }
 
@@ -176,7 +180,7 @@ body {
   content: "";
   position: absolute;
   top: -100px;
-  left: 140px;
+  left: 135px;
   width: 86px;
   height: 86px;
   border-radius: 50%;
@@ -486,6 +490,7 @@ body {
   position: relative;
   background-color: #c0301c;
   height: 367px;
+  min-width: 1140px;
   background-image: url("img/promo_bg.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -625,7 +630,8 @@ body {
 .clients-section {
   background-color: #f8f8f8;
   padding-top: 100px;
-  padding-bottom: 90px;
+  min-width: 1140px;
+  padding-bottom: 120px;
 }
 
 .clients-logos {
@@ -638,8 +644,28 @@ body {
   margin-bottom: 60px;
 }
 
+.clients-slider {
+  position: relative;
+}
+
+.slider-inner {
+  overflow: hidden;
+  width: 790px;
+  margin: 0 auto;
+}
+
+.slider-slides {
+  width: 300%;
+  transition: transform 0.8s ease;
+}
+
+.slide {
+  float: left;
+  width: 790px;
+  margin: 0 auto;
+}
+
 .client-comment {
-  max-width: 790px;
   margin: 0 auto;
   text-align: center;
   font-style: italic;
@@ -657,15 +683,17 @@ body {
   line-height: 30px;
   margin-bottom: 33px;
 }
-
-.clients-slider {
+.slider-buttons {
+  position: absolute;
+  top: 150px;
+  left: 545px;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: flex-start;
 }
 
-.clients-slider input[type=radio] {
+.slider-buttons input[type="radio"] {
   display: none;
 }
 
@@ -684,8 +712,6 @@ body {
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
     background-color: #c0301c;
 }
-
-
 
 .contact-section {
   padding-top: 80px;
@@ -834,6 +860,7 @@ form input[type="submit"]:focus {
 .page-footer {
   background-color: #c0301c;
   padding-top: 100px;
+  min-width: 1140px;
   color: #ffffff;
   font-size: 12px;
   line-height: 20px;
