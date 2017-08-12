@@ -243,8 +243,18 @@ body {
   margin-right: 0;
 }
 
+.about-members {
+  overflow: hidden;
+  position: relative;
+}
+
+.about-members .about-slider {
+  width: 200%;
+}
+
 .about-member {
   float: left;
+  width: 263px;
   position: relative;
   margin-right: 29px;
   text-align: center;
@@ -252,10 +262,6 @@ body {
 
 .about-member:last-child {
   margin-right: 0;
-}
-
-.about-member img {
-  margin-bottom: -8px;
 }
 
 .member-name {
@@ -293,33 +299,29 @@ body {
   opacity: 1;
 }
 
-.about-member:first-child::before {
-  content: "";
+.about-prev,
+.about-next {
   position: absolute;
   top: 106px;
-  left: 0;
   width: 35px;
   height: 38px;
-  opacity: 0.2;
-  background-color: #555555;
   background-image: url("img/sprite.png");
   background-repeat: no-repeat;
-  background-position: -15px -92px;
   z-index: 2;
+  border: none;
+  outline: none;
+  background-color: #c0301c;
+  cursor: pointer;
 }
 
-.about-member:nth-child(4)::before {
-  content: "";
-  position: absolute;
-  top: 106px;
-  right: 0;
-  width: 35px;
-  height: 38px;
-  background-color: #c0301c;
-  background-image: url("img/sprite.png");
-  background-repeat: no-repeat;
+.about-prev {
+  left: 0;
+  background-position: -15px -92px;
+}
+
+.about-next{
+  left: 1104px;
   background-position: -17px -17px;
-  z-index: 2;
 }
 
 
@@ -811,6 +813,7 @@ form input {
   margin-bottom: 21px;
 }
 
+
 form input:not(:nth-child(2n)) {
   margin-right: 30px;
 }
@@ -836,6 +839,7 @@ form textarea:focus  {
 
 form input[type="submit"] {
   width: 170px;
+  padding: 0;
   background: #ffffff;
   margin-right: 35px;
 }

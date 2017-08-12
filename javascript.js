@@ -27,7 +27,19 @@ function ClientsCommentsSlide () {
   });
 }
 
+function AboutCarousel () {
+   $('.about-members .about-slider').slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: $('.about-prev'),
+    nextArrow: $('.about-next'),
+  });
+}
+
 $(document).ready(function() {
   WorksSort();
   ClientsCommentsSlide();
+  AboutCarousel();
 });
