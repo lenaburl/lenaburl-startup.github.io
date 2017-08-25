@@ -1,5 +1,4 @@
-# startup
-Startup Page
+# Startup Page
 
 I've done an example of landing page. 
 I used the Slick library (https://github.com/kenwheeler/slick/) for writing js-code for a carousel.
